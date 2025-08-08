@@ -6,30 +6,30 @@ import java.util.Random;
 
 public class CircleClass {
     private List<String> circles = new ArrayList<>();
-    
+
     public void fillCircles() {
         Random random = new Random();
-        
-        // Заполняю белые шары
+
+        // РЎРѕР·РґР°РµРј РєСЂСѓРіРё Р±РµР»РѕРіРѕ С†РІРµС‚Р°
         for(int i = 0; i < random.nextInt(10, 20); i++)
         {
             circles.add(CircleColour.WHITE.getCircleColour());
         }
-        
-        // Добавляю в лист один черный шар
+
+        // Р”РѕР±Р°РІР»СЏРµРј РѕРґРёРЅ С‡РµСЂРЅС‹Р№ РєСЂСѓРі СЃР»СѓС‡Р°Р№РЅРѕ
         circles.set(random.nextInt(0, circles.size()), CircleColour.BLACK.getCircleColour());
     }
 
     public String findBlackCircle() {
         for(String circle : circles) {
             if(circle.equals(CircleColour.BLACK.getCircleColour())) {
-                return "Черный шар найден под индексом - " + circles.indexOf(circle) + "\n\n[i] Любой массив (как и список) начинает счет с нулевого индекса";
+                return "Р§РµСЂРЅС‹Р№ РєСЂСѓРі РЅР°С…РѕРґРёС‚СЃСЏ РЅР° РїРѕР·РёС†РёРё - " + circles.indexOf(circle) + "\n\n[i] Р’СЃРµ РєСЂСѓРіРё (РєСЂРѕРјРµ РѕРґРЅРѕРіРѕ) РёРјРµСЋС‚ Р±РµР»С‹Р№ С†РІРµС‚ РІ РЅР°С‡Р°Р»СЊРЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё";
             }
         }
-        
-        return "черный шар не найден!";
+
+        return "Р§РµСЂРЅС‹Р№ РєСЂСѓРі РЅРµ РЅР°Р№РґРµРЅ!";
     }
-    
+
     public List<String> getCircles() {
         return circles;
     }

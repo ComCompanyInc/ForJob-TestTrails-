@@ -3,11 +3,11 @@ package circletestapp;
 public enum CircleColour {
     WHITE,
     BLACK;
-    
+
     public String getCircleColour() {
         return switch (this) {
-            case WHITE -> "Áåëûé";
-            case BLACK -> "×åðíûé";
+            case WHITE -> "Ð‘ÐµÐ»Ñ‹Ð¹";
+            case BLACK -> "Ð§ÐµÑ€Ð½Ñ‹Ð¹";
         };
     }
 }
